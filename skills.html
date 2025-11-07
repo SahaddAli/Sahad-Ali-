@@ -1,52 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Skills | Sahad Ali</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills - Sahad Ali</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <h1>My Skills & Certifications</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="skills.html">Skills</a>
-      <a href="business.html">Business Showcase</a>
-      <a href="problem-solving.html">Problem Solving</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Sahad Ali</div>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="skills.html" class="nav-link active">Skills</a></li>
+                    <li><a href="showcase.html" class="nav-link">Projects</a></li>
+                    <li><a href="problem-solving.html" class="nav-link">Problem Solving</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
 
-  <main>
-    <section class="skills">
-      <h2>Technical Skills</h2>
-      <ul>
-        <li>SQL</li>
-        <li>Power BI</li>
-        <li>Lucidchart</li>
-        <li>Microsoft Excel, Word, PowerPoint</li>
-        <li>Python (for Data Analysis)</li>
-      </ul>
-
-      <h2>Certifications</h2>
-      <ul>
-        <li>Microsoft Office Specialist (Word & PowerPoint)</li>
-        <li>Global Silver Excellence Scholarship, University of Salford</li>
-      </ul>
-
-      <h2>Professional Experience</h2>
-      <table>
-        <tr><th>Role</th><th>Organisation</th><th>Key Skills</th></tr>
-        <tr><td>Store Assistant</td><td>Aldi</td><td>Customer Service, Time Management, Accuracy</td></tr>
-        <tr><td>Enumerator</td><td>Tracsis Traffic Data</td><td>Data Accuracy, Teamwork, Operational Resilience</td></tr>
-      </table>
+    <section class="page active">
+        <div class="container">
+            <h2 class="page-title">Skills & Qualifications</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Education</h3>
+                    <div class="skill-item">
+                        <h4>BSc Business Management with Innovation and Technology</h4>
+                        <p>University of Salford</p>
+                        <p>First Year Grade: 1st Class Hons (81%)</p>
+                        <p>Global Silver Excellence Scholarship</p>
+                    </div>
+                    <div class="skill-item">
+                        <h4>Relevant Modules</h4>
+                        <p>Data Analysis, Business Information Systems, Business Intelligence, Digital and Business Skills</p>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Certifications</h3>
+                    <div class="skill-item">
+                        <h4>Microsoft Office Specialist</h4>
+                        <p>PowerPoint Associate & Word Associate</p>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Technical Skills</h3>
+                    <div class="skill-item">
+                        <h4>Advanced Proficiency</h4>
+                        <p>Microsoft Excel, PowerPoint, Word, Lucid Chart</p>
+                    </div>
+                    <div class="skill-item">
+                        <h4>Intermediate Proficiency</h4>
+                        <p>Power BI, SQL</p>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Work Experience</h3>
+                    <div class="skill-item">
+                        <h4>Store Assistant - Aldi</h4>
+                        <p>Delivered exceptional customer service in a fast-paced retail environment, operating tills and processing transactions with speed and accuracy.</p>
+                    </div>
+                    <div class="skill-item">
+                        <h4>Enumerator - Tracsis Traffic Data</h4>
+                        <p>Collected and recorded accurate passenger flow data, maintaining 100% data accuracy across assigned projects while adapting to real-time challenges.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-  </main>
 
-  <footer>
-    <p>&copy; 2025 Sahad Ali</p>
-  </footer>
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Sahad Ali. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
-
