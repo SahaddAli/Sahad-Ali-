@@ -1,52 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Skills | Sahad Ali</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Skills — Sahad Ali</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>My Skills & Certifications</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="skills.html">Skills</a>
-      <a href="business.html">Business Showcase</a>
-      <a href="problem-solving.html">Problem Solving</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html"><svg width="42" height="42" viewBox="0 0 24 24"><rect width="24" height="24" rx="4" fill="#004aad"></rect><text x="12" y="16" text-anchor="middle" font-family="Segoe UI, Tahoma, sans-serif" font-size="12" fill="#fff">SA</text></svg><span class="brand-text">Sahad Ali</span></a>
+      <button id="navToggle3" class="nav-toggle" aria-expanded="false" aria-controls="mainNav3"><span class="hamburger"></span><span class="sr-only">Toggle navigation</span></button>
+      <nav id="mainNav3" class="main-nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="skills.html" class="active">Skills</a>
+        <a href="business.html">Business Showcase</a>
+        <a href="problem-solving.html">Problem Solving</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <section class="skills">
-      <h2>Technical Skills</h2>
-      <ul>
-        <li>SQL</li>
-        <li>Power BI</li>
-        <li>Lucidchart</li>
-        <li>Microsoft Excel, Word, PowerPoint</li>
-        <li>Python (for Data Analysis)</li>
-      </ul>
+  <main class="container">
+    <section>
+      <h1>Skills & Certifications</h1>
 
-      <h2>Certifications</h2>
-      <ul>
-        <li>Microsoft Office Specialist (Word & PowerPoint)</li>
-        <li>Global Silver Excellence Scholarship, University of Salford</li>
-      </ul>
+      <!-- Structured layout: sections, lists and a table for readability -->
+      <div class="two-col">
+        <div>
+          <h2>Technical Skills</h2>
+          <ul>
+            <li>SQL — querying and basic optimisation</li>
+            <li>Power BI — dashboards and visual analytics</li>
+            <li>Microsoft Excel — PivotTables, charts & data-cleaning</li>
+            <li>Python (Google Colab) — data cleaning & plotting</li>
+            <li>Lucidchart — process & system modelling (DFD, UCD, Rich Picture)</li>
+          </ul>
+        </div>
 
-      <h2>Professional Experience</h2>
-      <table>
-        <tr><th>Role</th><th>Organisation</th><th>Key Skills</th></tr>
-        <tr><td>Store Assistant</td><td>Aldi</td><td>Customer Service, Time Management, Accuracy</td></tr>
-        <tr><td>Enumerator</td><td>Tracsis Traffic Data</td><td>Data Accuracy, Teamwork, Operational Resilience</td></tr>
+        <div>
+          <h2>Soft Skills</h2>
+          <ul>
+            <li>Problem-solving & analytical thinking</li>
+            <li>Teamwork & leadership — Captain (U-17 football)</li>
+            <li>Communication — Model United Nations (Best Position Paper)</li>
+            <li>Customer-facing experience — Aldi till operations</li>
+          </ul>
+        </div>
+      </div>
+
+      <h2>Certifications & Awards</h2>
+      <table class="skills-table">
+        <thead>
+          <tr><th>Certification / Award</th><th>Issuer</th><th>Year / Notes</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Microsoft Office Specialist (Word & PowerPoint)</td><td>Microsoft</td><td>Verified</td></tr>
+          <tr><td>Global Silver Excellence Scholarship</td><td>University of Salford</td><td>Awarded during BSc</td></tr>
+        </tbody>
       </table>
+
+      <h2>Work Experience (summary)</h2>
+      <ol>
+        <li><strong>Store Assistant</strong> — Aldi: customer service, cash handling, merchandising.</li>
+        <li><strong>Enumerator</strong> — Tracsis Traffic Data: accurate passenger flow data collection and quality assurance.</li>
+      </ol>
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2025 Sahad Ali</p>
+  <footer class="site-footer">
+    <div class="container">
+      <small>&copy; 2025 Sahad Ali</small>
+    </div>
   </footer>
+
+  <script src="script.js" defer></script>
 </body>
 </html>
-
