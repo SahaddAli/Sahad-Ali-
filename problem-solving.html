@@ -1,63 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Problem Solving | Sahad Ali</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Problem-Solving — Delight Dine (Restaurant Prototype)</title>
   <link rel="stylesheet" href="style.css" />
-  <script src="script.js" defer></script>
+  <meta name="description" content="Restaurant digital transformation prototype demonstrating bookings, contact, social integration and UX design." />
 </head>
 <body>
-  <header>
-    <h1>Restaurant Digital Transformation Case Study</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="skills.html">Skills</a>
-      <a href="business.html">Business Showcase</a>
-      <a href="problem-solving.html">Problem Solving</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+  <header class="site-header">
+    <div class="container header-inner">
+      <!-- Restaurant name and link back to portfolio home -->
+      <a class="brand" href="index.html" title="Back to Sahad Ali portfolio">
+        <svg width="42" height="42" viewBox="0 0 24 24"><rect width="24" height="24" rx="4" fill="#8b3e2f"></rect><text x="12" y="16" text-anchor="middle" font-family="Segoe UI, Tahoma, sans-serif" font-size="12" fill="#fff">DD</text></svg>
+        <span class="brand-text">Delight Dine</span>
+      </a>
+
+      <button id="navToggle5" class="nav-toggle" aria-expanded="false" aria-controls="mainNav5"><span class="hamburger"></span><span class="sr-only">Toggle navigation</span></button>
+      <nav id="mainNav5" class="main-nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="skills.html">Skills</a>
+        <a href="business.html">Business Showcase</a>
+        <a href="problem-solving.html" class="active">Problem Solving</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <section class="case-intro">
+  <main class="container case-study">
+    <h1>Restaurant Digital Transformation — <span class="muted">Delight Dine (CTO Prototype)</span></h1>
+
+    <!-- Business context -->
+    <section class="context card">
       <h2>Business Context</h2>
-      <p>This case study focuses on helping a restaurant enhance its customer engagement, streamline bookings, and modernise communication through a digital web presence.</p>
+      <p>As CTO for Delight Dine, the goal is to modernise how the restaurant engages customers: improving online visibility, simplifying bookings, and creating reliable digital communication with minimal operational overhead.</p>
     </section>
 
-    <section class="restaurant-info">
-      <h3>Restaurant Contact Details</h3>
-      <p>Email: <a href="mailto:info@delightdine.com">info@delightdine.com</a></p>
-      <p>Phone: +44 1234 567890</p>
-      <p>Address: 123 Manchester Road, Salford, UK</p>
+    <!-- Contact & Social integration (required) -->
+    <section class="restaurant-contact card">
+      <h2>Contact & Social</h2>
+      <p><strong>Restaurant:</strong> Delight Dine</p>
+      <p><strong>Email:</strong> <a href="mailto:info@delightdine.com">info@delightdine.com</a></p>
+      <p><strong>Phone:</strong> <a href="tel:+441612345678">+44 161 234 5678</a></p>
+      <p><strong>Address:</strong> 123 Manchester Road, Salford, UK</p>
 
-      <h4>Follow Us:</h4>
-      <ul>
-        <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
-        <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
-        <li><a href="https://twitter.com" target="_blank">Twitter/X</a></li>
-      </ul>
+      <div class="socials">
+        <h3>Follow</h3>
+        <!-- Integration with social media — functional external links -->
+        <ul class="social-list">
+          <li><a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://twitter.com" target="_blank" rel="noopener">Twitter/X</a></li>
+        </ul>
+      </div>
     </section>
 
-    <section class="booking-form">
-      <h3>Book a Table / Send Feedback</h3>
-      <form id="bookingForm">
-        <label for="name">Name:</label>
-        <input type="text" id="name" required />
+    <!-- Interactive booking/feedback form (required) -->
+    <section class="booking card">
+      <h2>Book a Table or Send Feedback</h2>
+      <p class="small">Complete this form to generate an email to the restaurant. (No database required.)</p>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" required />
+      <form id="restaurantForm" class="form">
+        <!-- Minimal required fields to maximise completion rate -->
+        <label for="cust-name">Full name</label>
+        <input id="cust-name" name="cust-name" type="text" placeholder="Samantha Green" required>
 
-        <label for="message">Booking Request or Feedback:</label>
-        <textarea id="message" rows="5" required></textarea>
+        <label for="cust-email">Email</label>
+        <input id="cust-email" name="cust-email" type="email" placeholder="samantha@example.com" required>
 
-        <button type="submit">Generate Email</button>
+        <label for="cust-phone">Phone (optional)</label>
+        <input id="cust-phone" name="cust-phone" type="tel" placeholder="+44 7000 000000">
+
+        <label for="booking-type">Request type</label>
+        <select id="booking-type" name="booking-type" required>
+          <option value="booking">Table booking</option>
+          <option value="feedback">Feedback</option>
+          <option value="other">Other enquiry</option>
+        </select>
+
+        <label for="cust-date">Preferred date & time (optional)</label>
+        <input id="cust-date" name="cust-date" type="datetime-local">
+
+        <label for="cust-message">Details (booking request or feedback)</label>
+        <textarea id="cust-message" name="cust-message" rows="5" required placeholder="Please include party size, accessibility needs, or any questions..."></textarea>
+
+        <div class="form-actions">
+          <button type="submit">Generate Email to Restaurant</button>
+          <button type="button" id="clearForm" class="outline">Clear</button>
+        </div>
       </form>
+
+      <p class="note small">Technical note: On submit, the page constructs a mailto: URL with a subject and a body containing user inputs. This ensures the restaurant team receives the message via email client — fulfilling the brief's requirement for an interactive form without a backend.</p>
+    </section>
+
+    <!-- Simple demo dashboard area (multimedia optional) -->
+    <section class="design-explain card">
+      <h2>Design Choices — Quick Explanation</h2>
+      <p>The page is intentionally simple and mobile-first: clear contact details and social links at the top, followed by a short form. This reduces friction for mobile users who want to book quickly. The form fields were chosen to balance business needs (date, party size, accessibility notes) and user friction (keeping required fields minimal).</p>
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2025 Sahad Ali</p>
+  <footer class="site-footer">
+    <div class="container">
+      <small>&copy; 2025 Delight Dine — prototype by Sahad Ali</small>
+    </div>
   </footer>
+
+  <script src="script.js" defer></script>
 </body>
 </html>
