@@ -1,35 +1,24 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
-  padding: 0;
-  line-height: 1.6;
-  background: #f9f9f9;
+  background: #f8f9fa;
   color: #333;
 }
 
 header {
-  background: #004080;
+  background-color: #004aad;
   color: white;
-  padding: 10px 20px;
-}
-
-header h1 {
-  margin: 0;
-  font-size: 1.8em;
-}
-
-nav {
-  margin-top: 8px;
+  padding: 1em 0;
+  text-align: center;
 }
 
 nav a {
   color: white;
+  margin: 0 10px;
   text-decoration: none;
-  margin-right: 15px;
   font-weight: bold;
 }
 
-nav a.active,
 nav a:hover {
   text-decoration: underline;
 }
@@ -37,73 +26,64 @@ nav a:hover {
 main {
   padding: 20px;
   max-width: 900px;
-  margin: 0 auto;
+  margin: auto;
   background: white;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-h2 {
-  color: #004080;
-  border-bottom: 2px solid #004080;
-  padding-bottom: 5px;
-}
-
-.social-links {
-  list-style: none;
-  padding-left: 0;
-}
-
-.social-links li {
-  display: inline;
-  margin-right: 15px;
-}
-
-.social-links a {
-  color: #004080;
-  text-decoration: none;
-}
-
-.social-links a:hover {
-  text-decoration: underline;
-}
-
-form label {
-  font-weight: bold;
-}
-
-form input[type="text"],
-form input[type="email"],
-form textarea {
-  width: 100%;
-  padding: 8px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-
-form button {
-  background: #004080;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  font-size: 1em;
-  border-radius: 4px;
-}
-
-form button:hover {
-  background: #003366;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
 }
 
 footer {
   text-align: center;
-  padding: 10px;
-  background: #004080;
+  padding: 1em;
+  background-color: #004aad;
   color: white;
-  position: fixed;
+  margin-top: 20px;
+}
+
+h1, h2, h3 {
+  color: #004aad;
+}
+
+/* Table styling */
+table {
   width: 100%;
-  bottom: 0;
+  border-collapse: collapse;
+  margin-top: 1em;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #004aad;
+  color: white;
+}
+
+/* Form styling */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input, textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #004aad;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #003380;
 }
