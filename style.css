@@ -290,4 +290,13 @@ label {
   white-space: nowrap;
   border: 0;
 }
+/* ===== Page Fade-In / Fade-Out Animation ===== */
+.fade {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+body.loaded .fade {
+  opacity: 1;
+}
 
