@@ -3,14 +3,23 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Business Showcase — Sahad Ali</title>
+  <title>Business Showcase - Sahad Ali</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="index.html"><svg width="42" height="42" viewBox="0 0 24 24"><rect width="24" height="24" rx="4" fill="#004aad"></rect><text x="12" y="16" text-anchor="middle" font-family="Segoe UI, Tahoma, sans-serif" font-size="12" fill="#fff">SA</text></svg><span class="brand-text">Sahad Ali</span></a>
-      <button id="navToggle4" class="nav-toggle" aria-expanded="false" aria-controls="mainNav4"><span class="hamburger"></span><span class="sr-only">Toggle navigation</span></button>
+      <a class="brand" href="index.html">
+        <svg width="42" height="42" viewBox="0 0 24 24">
+          <rect width="24" height="24" rx="4" fill="#004aad"></rect>
+          <text x="12" y="16" text-anchor="middle" font-family="Segoe UI, Tahoma, sans-serif" font-size="12" fill="#fff">SA</text>
+        </svg>
+        <span class="brand-text">Sahad Ali</span>
+      </a>
+      <button id="navToggle4" class="nav-toggle" aria-expanded="false" aria-controls="mainNav4">
+        <span class="hamburger"></span>
+        <span class="sr-only">Toggle navigation</span>
+      </button>
       <nav id="mainNav4" class="main-nav" aria-label="Primary">
         <a href="index.html">Home</a>
         <a href="skills.html">Skills</a>
@@ -24,54 +33,60 @@
   <main class="container">
     <section>
       <h1>Business & Project Showcase</h1>
-      <p>Three projects selected to highlight technical and business skills. Each entry outlines my role, the problem, and the outcome.</p>
+      <p>This page presents three academic projects that demonstrate my analytical, technical, and business problem-solving skills. Each project outlines my role, the problem addressed, and the outcome achieved.</p>
 
+      <!-- Project 1 -->
       <article class="project">
         <h2>1. Influencer Marketing Data Analysis</h2>
-        <p><strong>Role:</strong> Data Analyst (Academic project)</p>
+        <p><strong>Type:</strong> Academic Project (Data Analysis for Business Module)</p>
+        <p><strong>Role:</strong> Data Analyst</p>
         <p><strong>Problem:</strong> A consumer electronics brand needed a cost-effective influencer strategy that balanced reach and engagement.</p>
-        <p><strong>Approach & Outcome:</strong> I analysed the top 100 UK YouTubers using Excel (pivot tables, views-to-subscriber ratios) and proposed a tiered influencer mix prioritising mid-tier creators with high engagement for better ROI. The approach emphasised measurable KPIs and clear selection criteria.</p>
+        <p><strong>Approach & Outcome:</strong> I analysed the top 100 UK YouTubers using Excel (pivot tables, engagement ratios) to identify trends and proposed a tiered influencer marketing strategy. This balanced high-reach influencers with mid-tier creators who had higher engagement rates, improving campaign ROI. The project demonstrated how data analysis can inform business strategy.</p>
       </article>
 
+      <!-- Project 2 -->
       <article class="project">
-        <h2>2. OPAL Charity — Digital Transformation Proposal</h2>
+        <h2>2. OPAL Charity - Digital Transformation Proposal</h2>
+        <p><strong>Type:</strong> Academic Project (Business Information Systems Module)</p>
         <p><strong>Role:</strong> Business Analyst</p>
-        <p><strong>Problem:</strong> Paper-based systems caused communication bottlenecks and inefficient record keeping for a social care charity.</p>
-        <p><strong>Approach & Outcome:</strong> I conducted stakeholder analysis and produced system models (Rich Picture, DFD, Use Case Diagram) in Lucidchart to visualise data flows and user interactions. The recommended platform design improved data quality, reduced paperwork, and provided a roadmap for phased adoption.</p>
+        <p><strong>Problem:</strong> OPAL, a UK-based social care charity, faced inefficiencies caused by paper-based processes and communication challenges.</p>
+        <p><strong>Approach & Outcome:</strong> I conducted stakeholder analysis and created system models (Rich Picture, Data Flow Diagram, and Use Case Diagram) using Lucidchart to visualise OPAL’s operations. The proposed digital platform improved service delivery, reduced data duplication, and enhanced coordination among staff and carers. This project deepened my understanding of digital transformation and user-centred system design.</p>
       </article>
 
+      <!-- Project 3 -->
       <article class="project">
-        <h2>3. Restaurant Digital Transformation — Web Prototype (Problem-Solving Page)</h2>
-        <p><strong>Role:</strong> CTO (case-study role) & Web Developer</p>
-        <p><strong>Problem:</strong> A local restaurant required modern online presence to improve bookings, customer engagement and communication.</p>
-        <p><strong>Approach & Outcome:</strong> I designed an accessible, responsive web page that centralises contact, social integration, and a booking/feedback form which generates prefilled emails for staff. The prototype demonstrates how lightweight web tools can modernise operations without expensive backend systems.</p>
-
+        <h2>3. Student Well-being and Comfort Food Analysis</h2>
+        <p><strong>Type:</strong> Academic Project (Business Intelligence in Practice Module)</p>
+        <p><strong>Role:</strong> Data Analyst & Team Collaborator</p>
+        <p><strong>Problem:</strong> The project aimed to analyse the relationship between comfort food consumption, student stress levels, and academic performance to better understand student well-being.</p>
+        <p><strong>Approach & Outcome:</strong> I used Python in Google Colab to clean, analyse, and visualise survey data collected from students. Through correlation analysis and visual storytelling, we identified that balanced diets and mindfulness activities improved academic performance, while heavy reliance on fast food and caffeine during stress correlated negatively with grades. The findings were presented with actionable recommendations for improving student health and learning outcomes.</p>
       </article>
 
-      <!-- Design rationale for Problem-Solving Page (required by brief) -->
+      <!-- Design Rationale -->
       <section class="design-rationale">
         <h2>Design Rationale for the Problem-Solving Page</h2>
-        <p><strong>Objective:</strong> Improve customer engagement, modernise communication, and streamline bookings while keeping implementation low-cost and reliable.</p>
+        <p><strong>Objective:</strong> The Problem-Solving Page was designed to demonstrate technical proficiency in web development and to simulate how small businesses can enhance customer engagement and communication through digital tools.</p>
         <ul>
-          <li><strong>Mobile-first & responsive:</strong> Many restaurant users browse on mobile; the design uses a simple vertical flow so booking and contact actions are one-tap accessible.</li>
-          <li><strong>Clear CTAs & progressive disclosure:</strong> Contact and social links are prominent; the booking form is concise to maximise completion rates.</li>
-          <li><strong>No backend requirement:</strong> The mailto-based form guarantees that staff receive booking requests without needing a DB or hosting (fits small-business constraints).</li>
-          <li><strong>Trust & accessibility:</strong> Contact details are fully visible (email, phone, address) and links open in a new tab with `rel="noopener"` to maintain security.</li>
-          <li><strong>Performance & validation:</strong> Lightweight assets and vanilla JavaScript keep load times low and simplify W3C validation.</li>
+          <li><strong>Mobile-first & responsive:</strong> Ensures accessibility and easy navigation across devices.</li>
+          <li><strong>Clear CTAs & usability:</strong> Provides straightforward options for users to interact with the business (booking, feedback).</li>
+          <li><strong>Low-cost digital solution:</strong> The mailto-based form is simple, functional, and effective for small business needs without requiring a backend database.</li>
+          <li><strong>Professional consistency:</strong> Maintains uniform styling, tone, and branding across the portfolio site for a cohesive presentation.</li>
         </ul>
       </section>
 
-      <!-- AI usage statement (required for submission if AI used) -->
+      <!-- AI Usage Statement -->
       <section class="ai-usage">
         <h2>Generative AI Usage Statement</h2>
-        <p>I used ChatGPT to help draft and structure the website code and documentation. All AI-generated code and text were reviewed, adapted and commented by me (Sahad Ali) to ensure understanding and to meet the assessment's learning outcomes. The repository includes a README that declares this usage. Any external code snippets used were verified and referenced in the project documentation.</p>
+        <p>I used ChatGPT to help draft and refine website code and written content structure. All AI-generated material was reviewed and customised by me (Sahad Ali) to ensure alignment with learning outcomes and academic integrity. External references and project details are based on my real coursework and verified experiences.</p>
       </section>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container">
-      <small>&copy; 2025 Sahad Ali</small>
+      <small>&copy; 2025 Sahad Ali - 
+        <a href="https://www.linkedin.com/in/sahadali" target="_blank" rel="noopener">LinkedIn</a>
+      </small>
     </div>
   </footer>
 
