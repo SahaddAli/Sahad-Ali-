@@ -2,85 +2,62 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Problem-Solving - Sahad Ali</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Problem Solving | Sahad Ali</title>
   <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
 </head>
 <body>
   <header>
-    <h1>Sahad Ali</h1>
+    <h1>Restaurant Digital Transformation Case Study</h1>
     <nav>
       <a href="index.html">Home</a>
-      <a href="contact.html">Contact</a>
       <a href="skills.html">Skills</a>
-      <a href="showcase.html">Business Showcase</a>
-      <a href="problem-solving.html" class="active">Problem-Solving</a>
+      <a href="business.html">Business Showcase</a>
+      <a href="problem-solving.html">Problem Solving</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </header>
+
   <main>
-    <section>
-      <h2>Restaurant Digital Transformation Case Study</h2>
-      <p>
-        This project aims to improve customer engagement, modernize communication, and streamline bookings for a restaurant through a digital platform.
-      </p>
+    <section class="case-intro">
+      <h2>Business Context</h2>
+      <p>This case study focuses on helping a restaurant enhance its customer engagement, streamline bookings, and modernise communication through a digital web presence.</p>
+    </section>
 
-      <h3>Contact Information</h3>
-      <p>Phone: 01234 567890</p>
-      <p>Email: <a href="mailto:contact@restaurant.com">contact@restaurant.com</a></p>
+    <section class="restaurant-info">
+      <h3>Restaurant Contact Details</h3>
+      <p>Email: <a href="mailto:info@delightdine.com">info@delightdine.com</a></p>
+      <p>Phone: +44 1234 567890</p>
+      <p>Address: 123 Manchester Road, Salford, UK</p>
 
-      <h3>Follow Us on Social Media</h3>
-      <ul class="social-links">
-        <li><a href="https://facebook.com/restaurant" target="_blank" rel="noopener">Facebook</a></li>
-        <li><a href="https://instagram.com/restaurant" target="_blank" rel="noopener">Instagram</a></li>
-        <li><a href="https://twitter.com/restaurant" target="_blank" rel="noopener">Twitter</a></li>
+      <h4>Follow Us:</h4>
+      <ul>
+        <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
+        <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
+        <li><a href="https://twitter.com" target="_blank">Twitter/X</a></li>
       </ul>
+    </section>
 
-      <h3>Booking & Feedback Form</h3>
+    <section class="booking-form">
+      <h3>Book a Table / Send Feedback</h3>
       <form id="bookingForm">
-        <label for="name">Name:</label><br />
-        <input type="text" id="name" name="name" required /><br />
+        <label for="name">Name:</label>
+        <input type="text" id="name" required />
 
-        <label for="email">Email:</label><br />
-        <input type="email" id="email" name="email" required /><br />
+        <label for="email">Email:</label>
+        <input type="email" id="email" required />
 
-        <label for="request">Booking Request / Feedback:</label><br />
-        <textarea id="request" name="request" rows="4" required></textarea><br />
+        <label for="message">Booking Request or Feedback:</label>
+        <textarea id="message" rows="5" required></textarea>
 
-        <button type="submit">Send</button>
+        <button type="submit">Generate Email</button>
       </form>
-      <p id="message"></p>
     </section>
   </main>
+
   <footer>
-    <p>&copy; 2024 Sahad Ali</p>
+    <p>&copy; 2025 Sahad Ali</p>
   </footer>
-  <script>
-    document.getElementById('bookingForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-
-      const name = e.target.name.value.trim();
-      const email = e.target.email.value.trim();
-      const request = e.target.request.value.trim();
-
-      if (!name || !email || !request) {
-        document.getElementById('message').textContent = 'Please fill in all fields.';
-        return;
-      }
-
-      // Construct mailto link with form data
-      const subject = encodeURIComponent('Booking/Feedback from ' + name);
-      const body = encodeURIComponent(
-        `Name: ${name}\nEmail: ${email}\nRequest/Feedback:\n${request}`
-      );
-
-      const mailtoLink = `mailto:contact@restaurant.com?subject=${subject}&body=${body}`;
-
-      // Open user's email client with prefilled message
-      window.location.href = mailtoLink;
-
-      document.getElementById('message').textContent = 'Your email client should now open. If not, please ensure you have an email client configured.';
-      e.target.reset();
-    });
-  </script>
 </body>
 </html>
