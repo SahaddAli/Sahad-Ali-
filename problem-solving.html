@@ -1,64 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Problem Solving | Sahad Ali</title>
-  <link rel="stylesheet" href="style.css" />
-  <script src="script.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem Solving - Sahad Ali</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <h1>Restaurant Digital Transformation Case Study</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="skills.html">Skills</a>
-      <a href="business.html">Business Showcase</a>
-      <a href="problem-solving.html">Problem Solving</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Sahad Ali</div>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="skills.html" class="nav-link">Skills</a></li>
+                    <li><a href="showcase.html" class="nav-link">Projects</a></li>
+                    <li><a href="problem-solving.html" class="nav-link active">Problem Solving</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
 
-  <main>
-    <section class="case-intro">
-      <h2>Business Context</h2>
-      <p>This case study focuses on helping a restaurant enhance its customer engagement, streamline bookings, and modernise communication through a digital web presence.</p>
+    <section class="page active">
+        <div class="container">
+            <h2 class="page-title">Problem-Solving in Action</h2>
+            
+            <div class="restaurant-showcase">
+                <div class="restaurant-header">
+                    <h2 class="restaurant-name">Bella Vista Restaurant</h2>
+                    <p class="restaurant-tagline">Authentic Italian Cuisine in the Heart of the City</p>
+                </div>
+                
+                <div class="restaurant-content">
+                    <div class="restaurant-info">
+                        <h3>About Our Digital Transformation</h3>
+                        <p>Bella Vista Restaurant embarked on a digital transformation journey to enhance customer engagement, modernize communication channels, and streamline the booking process. Our goals were to:</p>
+                        <ul>
+                            <li>Improve online visibility and customer reach</li>
+                            <li>Provide an intuitive booking experience</li>
+                            <li>Strengthen our social media presence</li>
+                            <li>Gather valuable customer feedback</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="restaurant-social">
+                        <h3>Connect With Us</h3>
+                        <p>Follow us on social media for the latest updates, special offers, and mouth-watering food photos!</p>
+                        <div class="social-links-restaurant">
+                            <a href="#" class="social-icon">FB</a>
+                            <a href="#" class="social-icon">IG</a>
+                            <a href="#" class="social-icon">TW</a>
+                        </div>
+                    </div>
+                    
+                    <div class="restaurant-info">
+                        <h3>Contact Details</h3>
+                        <div class="restaurant-contact">
+                            <p><strong>Address:</strong> 123 Italian Way, City Centre, Manchester</p>
+                            <p><strong>Phone:</strong> (0161) 123-4567</p>
+                            <p><strong>Email:</strong> info@bellavista.com</p>
+                            <p><strong>Opening Hours:</strong> Mon-Sun: 12pm-11pm</p>
+                        </div>
+                    </div>
+                    
+                    <div class="booking-form">
+                        <h3>Make a Reservation or Send Feedback</h3>
+                        <form id="restaurant-form">
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="date">Preferred Date</label>
+                                <input type="date" id="date" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="guests">Number of Guests</label>
+                                <select id="guests" class="form-control">
+                                    <option value="1">1 Person</option>
+                                    <option value="2">2 People</option>
+                                    <option value="3">3 People</option>
+                                    <option value="4">4 People</option>
+                                    <option value="5+">5+ People</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Special Requests or Feedback</label>
+                                <textarea id="message" class="form-control"></textarea>
+                            </div>
+                            <button type="submit" class="btn">Submit Reservation/Feedback</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section class="restaurant-info">
-      <h3>Restaurant Contact Details</h3>
-      <p>Email: <a href="mailto:info@delightdine.com">info@delightdine.com</a></p>
-      <p>Phone: +44 1234 567890</p>
-      <p>Address: 123 Manchester Road, Salford, UK</p>
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Sahad Ali. All Rights Reserved.</p>
+        </div>
+    </footer>
 
-      <h4>Follow Us:</h4>
-      <ul>
-        <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
-        <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
-        <li><a href="https://twitter.com" target="_blank">Twitter/X</a></li>
-      </ul>
-    </section>
-
-    <section class="booking-form">
-      <h3>Book a Table / Send Feedback</h3>
-      <form id="bookingForm">
-        <label for="name">Name:</label>
-        <input type="text" id="name" required />
-
-        <label for="email">Email:</label>
-        <input type="email" id="email" required />
-
-        <label for="message">Booking Request or Feedback:</label>
-        <textarea id="message" rows="5" required></textarea>
-
-        <button type="submit">Generate Email</button>
-      </form>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 Sahad Ali</p>
-  </footer>
+    <script src="script.js"></script>
 </body>
 </html>
-
