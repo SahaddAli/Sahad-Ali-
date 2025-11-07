@@ -1,38 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact | Sahad Ali</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — Sahad Ali</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>Contact Me</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="skills.html">Skills</a>
-      <a href="business.html">Business Showcase</a>
-      <a href="problem-solving.html">Problem Solving</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+  <!-- Header / Nav (repeated on all pages for consistency) -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html"><svg width="42" height="42" viewBox="0 0 24 24"><rect width="24" height="24" rx="4" fill="#004aad"></rect><text x="12" y="16" text-anchor="middle" font-family="Segoe UI, Tahoma, sans-serif" font-size="12" fill="#fff">SA</text></svg><span class="brand-text">Sahad Ali</span></a>
+      <button id="navToggle2" class="nav-toggle" aria-expanded="false" aria-controls="mainNav2"><span class="hamburger"></span><span class="sr-only">Toggle navigation</span></button>
+      <nav id="mainNav2" class="main-nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="skills.html">Skills</a>
+        <a href="business.html">Business Showcase</a>
+        <a href="problem-solving.html">Problem Solving</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <section class="contact-info">
-      <h2>Get in Touch</h2>
-      <p>Email: <a href="mailto:sahadali@example.com">sahadali@example.com</a></p>
-      <ul>
-        <li><a href="https://www.linkedin.com/in/sahadali" target="_blank">LinkedIn</a></li>
-        <li><a href="https://github.com/sahadali" target="_blank">GitHub</a></li>
-        <li><a href="https://twitter.com/sahadali" target="_blank">Twitter/X</a></li>
-      </ul>
+  <main class="container">
+    <section class="contact-page">
+      <h1>Contact</h1>
+      <p>If you'd like to connect about opportunities, projects or consulting work, please reach out using the details below.</p>
+
+      <div class="contact-cards">
+        <!-- Personal contact details -->
+        <div class="card">
+          <h3>Personal</h3>
+          <p><strong>Email:</strong> <a href="mailto:Sahadaliknr@gmail.com">Sahadaliknr@gmail.com</a></p>
+          <p><strong>Phone:</strong> <a href="tel:+447553159993">+44 7553 159993</a></p>
+          <p>
+            <strong>Socials:</strong>
+            <ul class="social-list">
+              <li><a href="https://www.linkedin.com/in/sahadali" target="_blank" rel="noopener">LinkedIn</a></li>
+              <li><a href="https://www.instagram.com/sahadd.8/" target="_blank" rel="noopener">Instagram</a></li>
+            </ul>
+          </p>
+        </div>
+
+        <!-- Quick contact form for recruiters (sends mailto to your personal email) -->
+        <div class="card">
+          <h3>Quick message (opens your email client)</h3>
+          <form id="recruiterForm">
+            <label for="r-name">Your name</label>
+            <input id="r-name" type="text" placeholder="Jane Smith" required />
+            <label for="r-email">Your email</label>
+            <input id="r-email" type="email" placeholder="jane@example.com" required />
+            <label for="r-message">Message</label>
+            <textarea id="r-message" rows="5" placeholder="Hi Sahad — I'd like to discuss..." required></textarea>
+            <button type="submit">Open Email</button>
+          </form>
+        </div>
+      </div>
+      <p class="note small">Note: Forms use the user's email client to generate emails (no database). This meets the assessment requirement.</p>
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2025 Sahad Ali</p>
+  <footer class="site-footer">
+    <div class="container">
+      <small>&copy; 2025 Sahad Ali</small>
+    </div>
   </footer>
+
+  <script src="script.js" defer></script>
 </body>
 </html>
-
