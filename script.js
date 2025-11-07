@@ -88,3 +88,24 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 });
+// Smooth Page Transition Script
+document.addEventListener("DOMContentLoaded", () => {
+  document.body.classList.add("loaded");
+
+  // Handle link transitions
+  const links = document.querySelectorAll("a[href]");
+  links.forEach(link => {
+    link.addEventListener("click", function (e) {
+      const target = this.getAttribute("href");
+
+      // Skip links that open new tabs, anchors, or mailto
+      if (!target || target.startsWith("#") || target.startsWith("mailto") || this.target === "_blank") return;
+
+      e.preventDefault();
+      document.body.classList.remove("loaded"); // triggers fade-out
+      setTimeout(() => {
+        window.location.href = target; // navigate after fade
+      }, 300);
+    });
+  });
+});
