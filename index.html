@@ -1,41 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sahad Ali | Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sahad Ali | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <h1>Sahad Ali</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="skills.html">Skills</a>
-      <a href="business.html">Business Showcase</a>
-      <a href="problem-solving.html">Problem Solving</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Sahad Ali</div>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link active">Home</a></li>
+                    <li><a href="skills.html" class="nav-link">Skills</a></li>
+                    <li><a href="showcase.html" class="nav-link">Projects</a></li>
+                    <li><a href="problem-solving.html" class="nav-link">Problem Solving</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
 
-  <main>
-    <section class="intro">
-      <h2>Welcome to My Professional Portfolio</h2>
-      <p>
-        I'm <strong>Sahad Ali</strong>, a second-year BSc Business Management with Innovation and Technology student at the University of Salford, awarded the <strong>Global Silver Excellence Scholarship</strong>. I’m passionate about using data analysis, business intelligence, and digital transformation to solve complex business challenges.
-      </p>
-      <p>
-        My experience spans data analysis projects, digital transformation case studies, and hands-on roles in fast-paced environments like Aldi and Tracsis. I enjoy combining analytical thinking with creativity to build efficient, impactful business solutions.
-      </p>
-      <p>
-        My goal is to grow as a Data Analyst or Business Consultant, helping organisations innovate and make data-driven decisions.
-      </p>
+    <section class="page active">
+        <div class="container">
+            <div class="hero">
+                <div class="hero-content">
+                    <h1>Sahad Ali</h1>
+                    <p>Business Management & Technology Student</p>
+                    <p>A proactive and analytically-minded Business Management student, specializing in Innovation and Technology. I excel at dissecting complex problems, designing efficient systems, and leveraging data to drive strategic decisions.</p>
+                    <p>My experiences in fast-paced operational environments, combined with my academic projects in digital transformation and data analysis, have equipped me with a unique ability to understand stakeholder needs and translate them into tangible solutions.</p>
+                    <p>Currently seeking industrial placement opportunities in Project Management and Business Analysis roles.</p>
+                    <a href="contact.html" class="btn">Get In Touch</a>
+                </div>
+                <div class="hero-image">
+                    <div class="profile-img" style="background-color: #3498db; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.2rem;">
+                        Profile Image
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-  </main>
 
-  <footer>
-    <p>&copy; 2025 Sahad Ali</p>
-  </footer>
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Sahad Ali. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
-
