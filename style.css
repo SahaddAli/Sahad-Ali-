@@ -1,125 +1,31 @@
-/* -------------------------
-   style.css — Global styles
-   Commented for assessors to follow structure
-   ------------------------- */
-
-/* Basic reset and body */
-:root{
-  --brand:#004aad;
-  --accent:#8b3e2f; /* restaurant accent for problem page */
-  --bg:#f8f9fa;
-  --card:#ffffff;
-  --muted:#666;
-  --max-width:1100px;
-  --radius:10px;
-  --gap:1rem;
-  --container-padding:1rem;
+/* --- Hero with image layout --- */
+.hero-with-image {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
 }
-*{box-sizing:border-box}
-html,body{height:100%}
-body{
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin:0;
-  background:var(--bg);
-  color:#222;
-  line-height:1.5;
-  -webkit-font-smoothing:antialiased;
+.hero-text {
+  flex: 1 1 380px;
 }
-
-/* Container for centered layout */
-.container{
-  width:calc(100% - 2*var(--container-padding));
-  max-width:var(--max-width);
-  margin:1.25rem auto;
-  padding:0 var(--container-padding);
+.hero-image {
+  flex: 1 1 280px;
+  text-align: center;
 }
-
-/* Header & nav */
-.site-header{
-  background:linear-gradient(90deg,var(--brand),#0a5ad1);
-  color:#fff;
-  padding:0.6rem 0;
-  position:sticky;
-  top:0;
-  z-index:50;
+.hero-image img {
+  width: 100%;
+  max-width: 380px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  object-fit: cover;
 }
-.header-inner{
-  display:flex;
-  align-items:center;
-  gap:1rem;
-  justify-content:space-between;
+@media (max-width: 800px) {
+  .hero-with-image {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .hero-text {
+    text-align: center;
+  }
 }
-.brand{display:flex;align-items:center;gap:0.5rem;color:white;text-decoration:none}
-.brand-text{font-weight:700}
-.main-nav{display:flex;gap:0.5rem;align-items:center}
-.main-nav a{color:#fff;text-decoration:none;padding:0.4rem 0.6rem;border-radius:6px;font-weight:600}
-.main-nav a:hover{background:rgba(255,255,255,0.08)}
-.main-nav a.active{background:rgba(255,255,255,0.12)}
-
-/* Hamburger for mobile nav */
-.nav-toggle{display:none;border:0;background:transparent;cursor:pointer;color:#fff}
-.nav-toggle .hamburger{
-  width:22px;height:2px;background:#fff;display:block;position:relative;
-}
-.nav-toggle .hamburger::after,
-.nav-toggle .hamburger::before{
-  content:"";position:absolute;left:0;right:0;height:2px;background:#fff;
-}
-.nav-toggle .hamburger::before{top:-6px}
-.nav-toggle .hamburger::after{bottom:-6px}
-
-/* Page sections / hero */
-.hero{padding:1.5rem 0;background:transparent}
-.hero h1{margin:0 0 0.5rem;font-size:1.9rem;color:#012a6b}
-.lead{font-size:1.05rem;color:#222;margin-bottom:0.6rem}
-.cta-row{display:flex;gap:0.75rem;margin-top:1rem}
-.btn{display:inline-block;padding:0.6rem 0.9rem;border-radius:8px;background:var(--brand);color:white;text-decoration:none;font-weight:700}
-.btn.outline{background:transparent;border:2px solid var(--brand);color:var(--brand)}
-.quick-highlights{margin-top:1.25rem}
-.quick-highlights ul{list-style:disc;margin-left:1.25rem}
-
-/* Cards & layout */
-.card{background:var(--card);padding:1rem;border-radius:var(--radius);box-shadow:0 4px 14px rgba(6,22,39,0.06);margin-bottom:1rem}
-.contact-cards{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
-.social-list{list-style:none;padding:0;margin:0;display:flex;gap:0.5rem}
-.social-list li{display:inline}
-
-/* Two-column layout for skills */
-.two-col{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem}
-
-/* Table styles for skills */
-.skills-table{width:100%;border-collapse:collapse;margin-top:0.5rem}
-.skills-table th, .skills-table td{padding:0.6rem;border:1px solid #e6e6e6}
-.skills-table th{background:var(--brand);color:#fff;text-align:left}
-
-/* Forms */
-form{display:flex;flex-direction:column;gap:0.6rem}
-input[type="text"],input[type="email"],input[type="tel"],input[type="datetime-local"],select,textarea{
-  padding:0.6rem;border:1px solid #d0d7de;border-radius:6px;font-size:0.95rem
-}
-button{padding:0.6rem 0.8rem;border-radius:8px;border:0;background:var(--brand);color:#fff;font-weight:700;cursor:pointer}
-button.outline{background:transparent;border:2px solid var(--muted);color:var(--muted)}
-.form-actions{display:flex;gap:0.5rem;align-items:center}
-
-/* footer */
-.site-footer{background:var(--brand);color:#fff;padding:0.85rem 0;margin-top:1rem;text-align:center;border-top-left-radius:8px;border-top-right-radius:8px}
-
-/* helper classes */
-.small{font-size:0.9rem;color:var(--muted)}
-.muted{color:var(--muted)}
-
-/* Responsive behaviour */
-@media (max-width:900px){
-  .two-col{grid-template-columns:1fr}
-  .contact-cards{grid-template-columns:1fr}
-}
-/* Mobile nav behaviour */
-@media (max-width:720px){
-  .main-nav{position:absolute;left:0;right:0;top:64px;background:var(--brand);flex-direction:column;display:none;padding:1rem}
-  .main-nav.show{display:flex}
-  .nav-toggle{display:block}
-  .container{padding:0.75rem}
-}
-
-/* Problem page accent - uses a warm accent color for the restaurant */
-.case-study .card{border-left:6px solid var(--accent)}
